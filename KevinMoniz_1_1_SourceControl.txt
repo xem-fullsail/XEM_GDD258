@@ -1,0 +1,28 @@
+Kevin Moniz
+GDD258-L
+1.1 - Source Control
+
+
+https://github.com/github/gitignore
+
+The .gitignore file is an important tool when working with git, and having access to a collection of ignore files for lots of different software solutions is a great resource to save.
+
+
+https://github.com/coinpride/CryptoList
+
+Provides a growing collection of resources covering all aspects of cryptocurrency.
+
+
+https://github.com/josephmisiti/awesome-machine-learning
+
+Provides a curated list of resources covering all aspects of machine learning and ai, broken down by programming language.
+
+
+https://github.com/Azure/MachineLearningNotebooks
+
+Provides a collection of Python notebooks with examples for Azure ML Python SDK.
+
+
+https://github.com/Kavex/GameDev-Resources
+
+Provides a collection of resources covering all topics related to game development.
