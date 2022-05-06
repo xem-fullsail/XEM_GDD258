@@ -1,10 +1,15 @@
 #pragma once
 #include "wx/wx.h"
 
-class App
+class MainWindow;
+
+class App : public wxApp
 {
 
-	//
+private:
+	MainWindow* mainWindow;
+
+public:
+	virtual bool OnInit();
 
 };
-
