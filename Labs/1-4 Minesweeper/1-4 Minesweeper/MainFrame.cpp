@@ -3,8 +3,6 @@
 
 #include "MainFrame.h"
 
-//wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
-//wxEND_EVENT_TABLE()
 
 MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "Minesweeper.xem", wxPoint(200, 200), wxSize(800, 800)) {
 	Buttons = new wxButton * [BoardWidth * BoardHeight];
@@ -42,7 +40,6 @@ void MainFrame::OnButtonClicked(wxCommandEvent &eventName) {
 			int randX = rand() % BoardWidth;
 			int randY = rand() % BoardHeight;
 			int randIndex = randY * BoardWidth + randX;
-			//if (Mines[randIndex] == 0 && randX != x && randY != y) {
 			if (Mines[randIndex] == 0 && randIndex != index) {
 				Mines[randIndex] = -1;
 				mines--;
