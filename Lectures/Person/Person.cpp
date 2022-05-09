@@ -16,6 +16,10 @@ public:
     std::string State;
     int ZipCode;
 
+    Person() {
+        //
+    }
+
     Person(std::string first, std::string last, std::string address, std::string city, std::string state, int zip) {
         FirstName = first;
         LastName = last;
@@ -25,35 +29,28 @@ public:
         ZipCode = zip;
     }
 
+    std::string Display() {
+        return FirstName + " " + LastName + "\n" + Address + "\n" + City + ", " + State + " " + std::to_string(ZipCode) + "\n";
+    }
+
 };
+
+std::string GetTextInput(std::string prompt) {
+    std::string s;
+    std::cout << prompt << " ";
+    std::getline(std::cin, s);
+    return s;
+}
 
 int main()
 {
-    std::string firstName;
-    std::cout << "Hello! Tell me more about you!\nWhat is your first name?\n";
-    std::cin >> firstName;
-
-    std::string lastName;
-    std::cout << "What is your last name?\n";
-    std::cin >> lastName;
-
-    std::string address;
-    std::cout << "What is your street address?\n";
-    std::cin >> address;
-
-    std::string city;
-    std::cout << "What is your city?\n";
-    std::cin >> city;
-
-    std::string state;
-    std::cout << "What is your state?\n";
-    std::cin >> state;
-
-    int zip;
-    std::cout << "What is your zip code?\n";
-    std::cin >> zip;
-
-    Person person = Person(firstName, lastName, address, city, state, zip);
-    std::cout << person.FirstName << " " << person.LastName << "\n" << person.Address << "\n" << person.City << ", " << person.State << " " << person.ZipCode << "\n";
+    Person person;
+    person.FirstName = GetTextInput("What is your first name?");
+    person.LastName = GetTextInput("What is your last name?");
+    person.Address = GetTextInput("What is your address?");
+    person.City = GetTextInput("What is your city?");
+    person.State = GetTextInput("What is your state?");
+    person.ZipCode = std::stoi(GetTextInput("What is your zip code?"));
+    std::cout << person.Display();
 }
 
